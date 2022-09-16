@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Students xmlns:c9="www.test.com/class_9">
+    <c9:Student>
+        <c9:id>1</c9:id>
+        <c9:name>Ali</c9:name>
+        <c9:age>12</c9:age>
+    </c9:Student>
+    <Student>
+        <id>2</id>
+        <name>Ali sher</name>
+        <age>15</age>
+    </Student>
+    <Student>
+        <id>3</id>
+        <name>Ali hassan</name>
+        <age>16</age>
+    </Student>
+    <Student>
+        <id>4</id>
+        <name>Ali khan</name>
+        <age>18</age>
+    </Student>
+    <Student>
+        <id>5</id>
+        <name>Ali rashid</name>
+        <age>20</age>
+    </Student>
+    <c9:Student>
+        <c9:id>6</c9:id>
+        <c9:name>mohd Ali</c9:name>
+        <c9:age>52</c9:age>
+    </c9:Student>
+    
+</Students>
