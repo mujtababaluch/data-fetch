@@ -7,13 +7,14 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 <title>Title</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <table class="table ">
+        <table class="table" id="myTable">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -26,16 +27,29 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 <script>
     $(document).ready(function(){
         $.get("data.xml",function(res){
             var tbody = document.getElementById("tbody")
-            $(res).find("c9\\:Student").each(function(){
-                var id = $(this).find("c9\\:id").text()
-                var name = $(this).find("c9\\:name").text()
-                var age = $(this).find("c9\\:age").text()
+            $(res).find("Student").each(function(){
+                var id = $(this).find("id").text()
+                var name = $(this).find("name").text()
+                var age = $(this).find("age").text()
                 tbody.innerHTML+="<tr><td>"+id+"</td>"+"<td>"+name+"</td>"+"<td>"+age+"</td></tr>";
             })
+            $('#myTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
         })
     })
 </script>

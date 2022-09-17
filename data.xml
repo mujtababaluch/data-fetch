@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Students xmlns:c9="www.test.com/class_9">
-    <c9:Student>
-        <c9:id>1</c9:id>
-        <c9:name>Ali</c9:name>
-        <c9:age>12</c9:age>
-    </c9:Student>
+    <Student>
+        <id>1</id>
+        <name>Ali</name>
+        <age>12</age>
+    </Student>
     <Student>
         <id>2</id>
         <name>Ali sher</name>
@@ -26,10 +26,10 @@
         <name>Ali rashid</name>
         <age>20</age>
     </Student>
-    <c9:Student>
-        <c9:id>6</c9:id>
-        <c9:name>mohd Ali</c9:name>
-        <c9:age>52</c9:age>
-    </c9:Student>
+    <Student>
+        <id>6</id>
+        <name>muhammad</name>
+        <age>52</age>
+    </Student>
     
 </Students>
